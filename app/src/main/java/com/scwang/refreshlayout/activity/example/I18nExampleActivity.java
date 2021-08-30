@@ -85,7 +85,7 @@ public class I18nExampleActivity extends AppCompatActivity implements AdapterVie
                 changeAppLanguage(Locale.CHINESE);
                 break;
             case R.string.item_example_i18n_english:
-                   changeAppLanguage(Locale.ENGLISH);
+                    changeAppLanguage(Locale.ENGLISH);
                 break;
         }
     }
