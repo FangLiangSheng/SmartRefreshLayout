@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.kuma.KumaGoodsActivity">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        app:srlDragRate="0.7"
+        app:srlEnableAutoLoadMore="true"
+     >
+
+
+<!--        <pl.droidsonroids.gif.GifImageView-->
+<!--            android:id="@+id/gifView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@mipmap/gif_header_repast"-->
+<!--            app:layout_srlSpinnerStyle="Scale"-->
+<!--            app:layout_srlBackgroundColor="@android:color/transparent"/>-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_practice_repast"/>
+<!--        <com.scwang.smartrefresh.layout.footer.ClassicsFooter-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:srlAccentColor="#888"-->
+<!--            app:srlClassicsSpinnerStyle="Translate"-->
+<!--            app:srlDrawableProgress="@drawable/ic_progress_puzzle"/>-->
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</android.support.constraint.ConstraintLayout>

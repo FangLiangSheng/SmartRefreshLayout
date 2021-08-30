@@ -3,18 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.scwang.refreshlayout">
 
+    <uses-sdk tools:overrideLibrary="com.github.czy1121.loadinglayout" />
     <!-- 读取SD卡权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 网络状态权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 网络状态权限 -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 网络访问权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 设备编号权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 网络访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 设备编号权限 -->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-    <uses-sdk
-        tools:overrideLibrary="com.github.czy1121.loadinglayout"/>
 
     <application
         android:name=".App"
@@ -24,18 +19,27 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".activity.IndexMainActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_index_main">
+        <activity android:name=".activity.kuma.KumaGoodsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW"/>
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FragmentActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.IndexMainActivity"
+            android:label="@string/title_activity_index_main"
+            android:screenOrientation="portrait">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activity.FragmentActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.style.FlyRefreshStyleActivity"
             android:label="@string/title_activity_style_fly_refresh"
@@ -139,19 +143,24 @@
             android:name=".activity.practice.WeiboPracticeActivity"
             android:label="@string/title_activity_practice_weibo"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.practice.BannerPracticeActivity"
+        <activity
+            android:name=".activity.practice.BannerPracticeActivity"
             android:label="@string/title_activity_practice_banner"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.practice.QQBrowserPracticeActivity"
+        <activity
+            android:name=".activity.practice.QQBrowserPracticeActivity"
             android:label="@string/title_activity_practice_qq_browser"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.example.CustomExampleActivity"
+        <activity
+            android:name=".activity.example.CustomExampleActivity"
             android:label="@string/title_activity_example_custom"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.example.SnapHelperExampleActivity"
+        <activity
+            android:name=".activity.example.SnapHelperExampleActivity"
             android:label="@string/title_activity_example_snap_helper"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.example.I18nExampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.example.I18nExampleActivity"
             android:label="@string/title_activity_example_i18n"
             android:screenOrientation="portrait" />
     </application>
